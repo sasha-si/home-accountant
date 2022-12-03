@@ -21,9 +21,4 @@ export class UsersService {
   createNewUser(user: User): Observable<User> {
     return this.http.post<User>(`http://localhost:3000/users`, user)
   };
-
-  checkIfEmailExist(email: string): Observable<boolean> {
-    return this.http.get<User | any>(`http://localhost:3000/users?email=${email}`)
-    .pipe(map((user: User[]) => user[0] ? true : false));
-  };
 };
