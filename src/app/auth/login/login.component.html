@@ -1,0 +1,38 @@
+<h3 class="h5 mb-2 fw-normal">Please log in</h3>
+<div class="alert alert-{{message.type}}" *ngIf="message.text">{{message.text}}</div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+   <div class="form-floating mb-2">
+      <input [ngClass]="{'is-invalid': form.get('loginEmail')?.invalid && form.get('loginEmail')?.touched}" type="email"
+         class="form-control" id="loginEmail" placeholder="name@example.com" formControlName="loginEmail">
+      <label *ngIf="form.get('loginEmail')?.touched === false || form.get('loginEmail')?.errors === null"
+         for="loginEmail">Email address</label>
+      <label *ngIf="form.get('loginEmail')?.errors?.['required'] && form.get('loginEmail')?.touched"
+         for="loginEmail">Email can't be empty!</label>
+      <label
+         *ngIf="form.get('loginEmail')?.invalid && form.get('loginEmail')?.errors?.['required'] === undefined && form.get('loginEmail')?.touched"
+         for="loginEmail">Please, enter a correct email!</label>
+   </div>
+   <div class="form-floating mb-1">
+      <input [ngClass]="{'is-invalid': form.get('loginPassword')?.invalid && form.get('loginPassword')?.touched}"
+         type="password" class="form-control" id="loginPassword" placeholder="Password" formControlName="loginPassword">
+      <label *ngIf="form.get('loginPassword')?.touched === false || form.get('loginPassword')?.errors === null"
+         for="loginPassword">Password</label>
+
+      <label *ngIf="form.get('loginPassword')?.errors?.['required'] && form.get('loginPassword')?.touched"
+         for="loginPassword">Password can't be empty!</label>
+
+      <label
+         *ngIf="form.get('loginPassword')?.invalid && form.get('loginPassword')?.errors?.['required'] === undefined && form.get('loginPassword')?.touched"
+         for="loginPassword">PW can't be < {{form.get('loginPassword')?.errors?.['minlength'].requiredLength}} ch, now
+            it's {{form.get('loginPassword')?.errors?.['minlength'].actualLength}}!</label>
+   </div>
+   <div class="checkbox mb-3">
+      <label>
+         <input type="checkbox" value="remember-me"> Remember me
+      </label>
+   </div>
+   <button [disabled]="form.invalid" class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+   <p class="my-3 text-muted">Have no account?
+      <a routerLink="/registration">Register now!</a>
+   </p>
+</form>

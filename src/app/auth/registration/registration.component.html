@@ -1,0 +1,45 @@
+<h3 class="h5 mb-2 fw-normal">Please register</h3>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+   <div class="form-floating mb-2">
+      <input [ngClass]="{'is-invalid': form.get('registrationEmail')?.invalid && form.get('registrationEmail')?.touched}" type="email" class="form-control" id="registrationEmail" placeholder="name@example.com" formControlName="registrationEmail">
+      <label *ngIf="form.get('registrationEmail')?.touched === false || form.get('registrationEmail')?.errors === null"
+         for="registrationEmail">Email address</label>
+      <label *ngIf="form.get('registrationEmail')?.errors?.['required'] && form.get('registrationEmail')?.touched"
+         for="registrationEmail">Email can't be empty!</label>
+      <label
+         *ngIf="form.get('registrationEmail')?.errors?.['email'] && form.get('registrationEmail')?.errors?.['required'] === undefined && form.get('registrationEmail')?.touched"
+         for="registrationEmail">Please, enter a correct email!</label>
+      <label
+         *ngIf="form.get('registrationEmail')?.errors?.['forbiddenEmail'] && form.get('registrationEmail')?.touched"
+         for="registrationEmail">The user has already existed!</label>
+   </div>
+   <div class="form-floating mb-2">
+      <input [ngClass]="{'is-invalid': form.get('registrationPassword')?.invalid && form.get('registrationPassword')?.touched}" type="password" class="form-control" id="registrationPassword" placeholder="Password" formControlName="registrationPassword">
+      <label *ngIf="form.get('registrationPassword')?.touched === false || form.get('registrationPassword')?.errors === null"
+         for="registrationPassword">Password</label>
+
+      <label *ngIf="form.get('registrationPassword')?.errors?.['required'] && form.get('registrationPassword')?.touched"
+         for="registrationPassword">Password can't be empty!</label>
+
+      <label
+         *ngIf="form.get('registrationPassword')?.invalid && form.get('registrationPassword')?.errors?.['required'] === undefined && form.get('registrationPassword')?.touched"
+         for="registrationPassword">PW can't be < {{form.get('registrationPassword')?.errors?.['minlength'].requiredLength}} ch, now
+            it's {{form.get('registrationPassword')?.errors?.['minlength'].actualLength}}!</label>
+   </div>
+   <div class="form-floating mb-1">
+      <input [ngClass]="{'is-invalid': form.get('registrationName')?.invalid && form.get('registrationName')?.touched}" type="text" class="form-control" id="registrationName" placeholder="Name" formControlName="registrationName">
+      <label *ngIf="form.get('registrationName')?.touched === false || form.get('registrationName')?.errors === null"
+         for="registrationName">Name</label>
+      <label *ngIf="form.get('registrationName')?.errors?.['required'] && form.get('registrationName')?.touched"
+         for="registrationName">Name can't be empty!</label>
+   </div>
+   <div [ngClass]="{'is-invalid': form.get('registrationAgree')?.invalid && form.get('registrationAgree')?.touched}" class="checkbox mb-3">
+      <label for="registrationAgree">
+         <input id="registrationAgree" type="checkbox" value="remember-me" formControlName="registrationAgree"> I agree with the rules
+      </label>
+   </div>
+   <button [disabled]="form.invalid" class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+   <p class="my-3 text-muted">Have the account already?
+      <a routerLink="/login">Login!</a>
+   </p>
+</form>
