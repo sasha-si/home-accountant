@@ -8,10 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AuthComponent implements OnInit {
 
   constructor() { }
-  
-  title = 'home accountant';
 
   ngOnInit(): void {
   }
-
 }

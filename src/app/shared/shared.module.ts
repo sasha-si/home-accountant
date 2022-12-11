@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LogoTitleComponent } from './components/logo-title/logo-title.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LogoTitleComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -13,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    LogoTitleComponent
   ]
 })
 export class SharedModule { }

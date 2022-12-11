@@ -1,14 +1,12 @@
+.form {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 40px;
+   padding-bottom: 40px;
+}
 .form-auth {
    max-width: 500px;
    padding: 15px;
    background-color: #fff;
-}
-
-.title {
-   color: #0d6efd;
-
-   & img {
-      vertical-align: bottom;
-      width: 40px;
-   }
 }

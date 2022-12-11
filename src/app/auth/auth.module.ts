@@ -13,7 +13,7 @@ import { RegistrationComponent } from './registration/registration.component';
   declarations: [
     LoginComponent,
     RegistrationComponent,
-    AuthComponent
+    AuthComponent,
   ],
   imports: [
     CommonModule,

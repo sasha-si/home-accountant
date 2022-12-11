@@ -1,9 +1,11 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, AsyncValidatorFn, AbstractControl, ValidationErrors, FormBuilder, AsyncValidator } from '@angular/forms';
+import { FormGroup, FormControl, Validators, AsyncValidatorFn, AbstractControl, ValidationErrors, FormBuilder } from '@angular/forms';
+import { map, Observable } from 'rxjs';
 
 import { UsersService } from './../../shared/services/users.service';
 import { User } from 'src/app/shared/interfaces/user';
-import { map, Observable } from 'rxjs';
+import { AuthService } from './../../shared/services/auth.service';
 
 @Component({
   selector: 'app-registration',
@@ -16,7 +18,9 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private usersService: UsersService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router:Router
   ) { }
 
   ngOnInit(): void {
@@ -43,7 +47,9 @@ export class RegistrationComponent implements OnInit {
 
     this.usersService.createNewUser(user)
       .subscribe((user) => {
-        console.log(user);
+        this.authService.logIn();
+        window.localStorage.setItem('user', JSON.stringify(user));
+        this.router.navigate(['system/bill']);
       });
   };
 

@@ -49,11 +49,9 @@ export class LoginComponent implements OnInit {
       .subscribe((user: User | undefined) => {
         if (user) {
           if (user.password === formData.loginPassword) {
-            this.showMessage(`Welcome ${user.name}!`, 'success');
             this.authService.logIn();
-            console.log(this.authService.isLoggedIn());
             window.localStorage.setItem('user', JSON.stringify(user));
-            // this.router.navigate();
+            this.router.navigate(['system/bill']);
           } else {
             this.showMessage("The password isn't valid!");
           }

@@ -11,6 +11,36 @@
       "email": "test@gmail.com",
       "password": "12345678",
       "name": "Test"
+    },
+    {
+      "email": "ssiu@gmail.comf",
+      "password": "987654321",
+      "name": "Alex",
+      "id": 3
+    },
+    {
+      "email": "siundiukova.oksana@gmail.com",
+      "password": "7777777",
+      "name": "Ksiu",
+      "id": 4
+    },
+    {
+      "email": "siundiukova.oksana@gmail.com",
+      "password": "7777777",
+      "name": "Ksiu",
+      "id": 5
+    },
+    {
+      "email": "dfg@fgh.com",
+      "password": "666666",
+      "name": "dgf",
+      "id": 6
+    },
+    {
+      "email": "ssiu@g",
+      "password": "666666",
+      "name": "test",
+      "id": 7
     }
   ]
 }
