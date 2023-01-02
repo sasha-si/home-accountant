@@ -1,3 +1,4 @@
+import { BillService } from './shared/services/bill.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,6 +12,8 @@ import { RecordPageComponent } from './record-page/record-page.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
+import { BillCardComponent } from './bill-page/bill-card/bill-card.component';
+import { CurrencyCardComponent } from './bill-page/currency-card/currency-card.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +24,12 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
     RecordPageComponent,
     SidebarComponent,
     HeaderComponent,
-    DropdownDirective
+    DropdownDirective,
+    BillCardComponent,
+    CurrencyCardComponent
   ],
+  providers: [BillService],
+
   imports: [
     CommonModule,
     SystemRoutingModule,
