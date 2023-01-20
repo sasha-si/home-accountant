@@ -10,5 +10,22 @@
   "bill": {
     "value": 100000,
     "currency": "UAH"
-  }
+  },
+  "categories": [
+    {
+      "name": "House",
+      "capacity": 15000,
+      "id": 1
+    },
+    {
+      "name": "Meal",
+      "capacity": 10000,
+      "id": 2
+    },
+    {
+      "name": "Car",
+      "capacity": 7000,
+      "id": 3
+    }
+  ]
 }

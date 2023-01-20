@@ -1,0 +1,22 @@
+<div class="card bg-white p-3">
+   <div class="card-header bordered">
+      <div class="header-block">
+         <h3 class="title">Add category</h3>
+      </div>
+   </div>
+   <div class="card-block">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+         <div class="form-group mb-3">
+            <label for="categoryName" class="form-label">Enter a name</label>
+            <input [ngClass]="{'is-invalid': form.get('categoryName')?.invalid && form.get('categoryName')?.touched}" type="text" class="form-control" id="categoryName" formControlName="categoryName">
+            <div class="invalid-feedback">This field have to be filled and more than 2 symbols length!</div>
+         </div>
+         <div class="form-group mb-3">
+            <label for="categoryValue" class="form-label">Enter a limit</label>
+            <input [ngClass]="{'is-invalid': form.get('categoryValue')?.invalid && form.get('categoryValue')?.touched}" type="number" class="form-control" id="categoryValue" formControlName="categoryValue">
+            <div class="invalid-feedback">The value should be more than 0!</div>
+         </div>
+         <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Add</button>
+      </form>
+   </div>
+</div>

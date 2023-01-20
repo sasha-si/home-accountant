@@ -1,11 +1,12 @@
 <div class="d-flex justify-content-between px-3">
    <h2>Bill section</h2>
-   <button class="btn b tn-sm btn-outline-info">
+   <button class="btn b tn-sm btn-outline-info" (click)="onRefresh()">
       <i class="bi bi-arrow-clockwise"></i>
    </button>
 </div>
 <hr class="px-3">
-<div class="d-flex justify-content-around">
-   <app-bill-card class="col-5"></app-bill-card>
-   <app-currency-card class="col-6"></app-currency-card>
+<div class="d-flex justify-content-around" *ngIf="!isLoaded">Loading...</div>
+<div class="d-flex justify-content-around" *ngIf="isLoaded">
+   <app-bill-card class="col-5" [bill]="bill" [currency]="currency"></app-bill-card>
+   <app-currency-card class="col-6" [currency]="currency"></app-currency-card>
 </div>

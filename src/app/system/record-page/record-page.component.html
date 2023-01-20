@@ -1,23 +1,15 @@
-<h2>Records section</h2>
-<div class="table-responsive">
-   <table class="table table-striped table-sm">
-      <thead>
-         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Header</th>
-            <th scope="col">Header</th>
-            <th scope="col">Header</th>
-            <th scope="col">Header</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr>
-            <td>1,001</td>
-            <td>random</td>
-            <td>data</td>
-            <td>placeholder</td>
-            <td>text</td>
-         </tr>
-      </tbody>
-   </table>
+<div class="d-flex justify-content-between px-3">
+   <h2>Records section</h2>
+   <!-- <button class="btn b tn-sm btn-outline-info" (click)="onRefresh()">
+      <i class="bi bi-arrow-clockwise"></i>
+   </button> -->
+</div>
+<hr class="px-3">
+<div class="d-flex justify-content-around" *ngIf="!isLoaded">Loading...</div>
+<div class="d-flex justify-content-around" *ngIf="isLoaded">
+   <app-add-event class="col-6 pe-3"></app-add-event>
+   <app-add-category class="col-6" (onCategoryAdd)="newCategoryAded($event)"></app-add-category>
+</div>
+<div class="d-flex justify-start">
+   <app-edit-category class="col-6 pt-3 pe-3"></app-edit-category>
 </div>

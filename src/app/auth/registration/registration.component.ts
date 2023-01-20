@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, AsyncValidatorFn, AbstractControl, ValidationErrors, FormBuilder } from '@angular/forms';
+import { FormGroup, Validators, AsyncValidatorFn, AbstractControl, ValidationErrors, FormBuilder } from '@angular/forms';
 import { map, Observable } from 'rxjs';
 
 import { UsersService } from './../../shared/services/users.service';
