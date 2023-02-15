@@ -1,8 +1,34 @@
-<div class="bg-white p-3">
-   <p>Current bill</p>
-   <ul class="p-0">
-      <li class="fs-5 d-flex justify-content-between pe-3"><i class="bi bi-currency-dollar text-primary"></i>1</li>
-      <li class="fs-5 d-flex justify-content-between pe-3"><i class="bi bi-currency-euro text-primary"></i>2</li>
-      <li class="fs-5 d-flex justify-content-between pe-3"><i class="bi bi-currency-yen text-primary">(UAH)</i>3</li>
-   </ul>
+<div class="card bg-white p-3">
+   <div class="card-header bordered">
+      <div class="header-block">
+         <h3 class="title">Edit category</h3>
+      </div>
+   </div>
+   <div class="card-block">
+      <div *ngIf="message.text" class="alert alert-{{message.type}}">{{message.text}}</div>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+         <div class="form-group mb-3">
+            <label for="eSelectCategory" class="form-label">Choose a category</label>
+            <select class="form-select" id="eSelectCategory" formControlName="eSelectCategory" (change)="onCategoryChange()">
+               <option *ngFor="let c of categories" value="{{c.id}}">
+                  {{c.name}}
+               </option>
+            </select>
+         </div>
+         <div class="form-group mb-3">
+            <label for="eCategoryName" class="form-label">Enter a name</label>
+            <input [ngClass]="{'is-invalid': form.get('eCategoryName')?.invalid && form.get('eCategoryName')?.touched}"
+               type="text" class="form-control" id="eCategoryName" formControlName="eCategoryName">
+            <div class="invalid-feedback">This field have to be filled and more than 2 symbols length!</div>
+         </div>
+         <div class="form-group mb-3">
+            <label for="eCategoryValue" class="form-label">Enter a limit</label>
+            <input
+              [ngClass]="{'is-invalid': form.get('eCategoryValue')?.invalid && form.get('eCategoryValue')?.touched}"
+               type="number" min="1" class="form-control" id="eCategoryValue" formControlName="eCategoryValue">
+            <div class="invalid-feedback">The value should be more than 0!</div>
+         </div>
+         <button [disabled]="form.invalid || form.controls['eCategoryName'].untouched && form.controls['eCategoryValue'].untouched" type="submit" class="btn btn-primary">Edit</button>
+      </form>
+   </div>
 </div>

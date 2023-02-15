@@ -33,7 +33,7 @@ export class RegistrationComponent implements OnInit {
     });
 
     this.form.valueChanges.subscribe((formValue => {
-      console.log('form', this.form);
+      // console.log('form', this.form);
     }))
   }
 

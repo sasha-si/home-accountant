@@ -15,8 +15,12 @@ export class BillService {
   getBill(): Observable<Bill> {
     return this.http.get<Bill>(`${baseURL}bill`);
   };
-
+  
   getCurrency(cur: string):Observable<any> {
     return this.http.get<any>(`https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?valcode=${cur}&json`);
+  };
+
+  updateBill(bill: Bill): Observable<Bill> {
+    return this.http.put<Bill>(`${baseURL}bill`, bill);
   };
  }

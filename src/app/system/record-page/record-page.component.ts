@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CategoriesService } from './../shared/services/categories.service';
 import { Category } from './../shared/interfaces/category';
 
 @Component({
@@ -9,14 +10,33 @@ import { Category } from './../shared/interfaces/category';
 })
 export class RecordPageComponent implements OnInit {
 
-  isLoaded = true;
+  isLoaded = false;
+  categories: Category[] = [];
 
-  constructor() { }
+  constructor(
+    private categoriesService: CategoriesService
+  ) { }
+
+  getData() {
+    this.categoriesService.getAllCategories()
+      .subscribe({
+        next: value => {
+          this.categories = value;
+          this.isLoaded = true;
+        }
+      });
+  };
 
   ngOnInit(): void {
+    this.getData();
   }
 
-  newCategoryAded(category: Category) {
-    //add to array
+  newCategoryAdded() {
+    this.getData();
+  };
+
+  onCategoryEdited(category: Category) {
+    const index = this.categories.findIndex((c) => c.id === category.id)
+    this.categories[index] = category ;
   };
 }

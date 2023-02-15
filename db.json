@@ -5,6 +5,12 @@
       "email": "ssiu@gmail.com",
       "password": "12345678",
       "name": "Admin"
+    },
+    {
+      "email": "siundiukova.oksana@gmail.com",
+      "password": "88888888",
+      "name": "Ksiu",
+      "id": 2
     }
   ],
   "bill": {
@@ -26,6 +32,131 @@
       "name": "Car",
       "capacity": 7000,
       "id": 3
+    },
+    {
+      "name": "Mob",
+      "capacity": 120,
+      "id": 4
+    },
+    {
+      "name": "Cat",
+      "capacity": 2500,
+      "id": 5
+    },
+    {
+      "name": "Bobby",
+      "capacity": 1500,
+      "id": 6
+    },
+    {
+      "name": "Job",
+      "capacity": 10000,
+      "id": 7
+    },
+    {
+      "name": "testtt",
+      "capacity": 20,
+      "id": 8
+    },
+    {
+      "name": "ghrrrrrrrrrrrrrrrrrrr",
+      "capacity": 100,
+      "id": 9
+    },
+    {
+      "name": "gh333",
+      "capacity": 333,
+      "id": 10
+    }
+  ],
+  "events": [
+    {
+      "type": "outcome",
+      "amount": 1250,
+      "category": 2,
+      "date": "Tuesday, February 7, 2023",
+      "description": "Rock&Roll",
+      "id": 1
+    },
+    {
+      "type": "income",
+      "amount": 1,
+      "category": 1,
+      "date": "2023-02-13T17:08:51.838Z",
+      "description": "Annual award",
+      "id": 2
+    },
+    {
+      "type": "outcome",
+      "amount": 1,
+      "category": 1,
+      "date": "2023-02-13T17:12:56.553Z",
+      "description": "fffd",
+      "id": 3
+    },
+    {
+      "type": "income",
+      "amount": 1,
+      "category": 1,
+      "date": "2023-02-13T17:21:07.185Z",
+      "description": "Annual award",
+      "id": 4
+    },
+    {
+      "type": "income",
+      "amount": 1,
+      "category": 1,
+      "date": "2023-02-13T21:27:00.188Z",
+      "description": "test",
+      "id": 5
+    },
+    {
+      "type": "income",
+      "amount": 9,
+      "category": 1,
+      "date": "2023-02-13T21:27:44.177Z",
+      "description": "testrrrrrrrrrrrrrr",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 10,
+      "category": 1,
+      "date": "2023-02-13T21:29:03.993Z",
+      "description": "test",
+      "id": 7
+    },
+    {
+      "type": "outcome",
+      "amount": 100000,
+      "category": 1,
+      "date": "2023-02-15T21:50:26.303Z",
+      "description": "fffdsd",
+      "id": 8
+    },
+    {
+      "type": "income",
+      "amount": 100000,
+      "category": 1,
+      "date": "2023-02-15T21:51:22.189Z",
+      "description": "Annual award",
+      "id": 9
+    },
+    {
+      "type": "outcome",
+      "amount": 100000,
+      "category": 1,
+      "date": "2023-02-15T21:56:42.412Z",
+      "description": "test",
+      "id": 10
+    },
+    {
+      "type": "income",
+      "amount": 100000,
+      "category": 1,
+      "date": "2023-02-15T21:57:11.352Z",
+      "description": "Annual award",
+      "id": 11
     }
   ]
 }

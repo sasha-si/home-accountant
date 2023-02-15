@@ -7,9 +7,10 @@
 <hr class="px-3">
 <div class="d-flex justify-content-around" *ngIf="!isLoaded">Loading...</div>
 <div class="d-flex justify-content-around" *ngIf="isLoaded">
-   <app-add-event class="col-6 pe-3"></app-add-event>
-   <app-add-category class="col-6" (onCategoryAdd)="newCategoryAded($event)"></app-add-category>
-</div>
-<div class="d-flex justify-start">
-   <app-edit-category class="col-6 pt-3 pe-3"></app-edit-category>
+   <app-add-event class="col-4 pe-3" [categories]="categories"></app-add-event>
+   <app-add-category class="col-4 pe-3" (onCategoryAdd)="newCategoryAdded()"></app-add-category>
+   <app-edit-category class="col-4"
+   [categories]="categories"
+   (onCategoryEdit)="onCategoryEdited($event)"
+   ></app-edit-category>
 </div>

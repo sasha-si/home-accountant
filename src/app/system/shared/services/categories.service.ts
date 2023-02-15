@@ -13,6 +13,14 @@ export class CategoriesService {
   constructor(private http: HttpClient) { }
 
   createNewCategory(category: Category): Observable<Category> {
-    return this.http.post<Category>(`${baseURL}categories`, category)
+    return this.http.post<Category>(`${baseURL}categories`, category);
+  };
+
+  getAllCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>(`${baseURL}categories`);
+  };
+
+  editCategogy(id: number, category: Category): Observable<Category> {
+    return this.http.put<Category>(`${baseURL}categories/${id}`, category);
   };
 }
