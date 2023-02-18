@@ -1,23 +1,30 @@
-<h2>Planning section</h2>
-<div class="table-responsive">
-   <table class="table table-striped table-sm">
-      <thead>
-         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Header</th>
-            <th scope="col">Header</th>
-            <th scope="col">Header</th>
-            <th scope="col">Header</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr>
-            <td>1,001</td>
-            <td>random</td>
-            <td>data</td>
-            <td>placeholder</td>
-            <td>text</td>
-         </tr>
-      </tbody>
-   </table>
+<div class="d-flex justify-content-between px-3">
+   <h2>Planning section</h2>
+</div>
+<hr class="px-3">
+<div class="d-flex justify-content-around" *ngIf="!isLoaded">Loading...</div>
+<div *ngIf="isLoaded">
+   <div class="d-flex justify-content-between px-3">
+      <div>
+         <h3>Outcome</h3>
+      </div>
+      <div>
+         <h3>Total balance: <span>{{bill.value |number:'1.2-2'}} UAH</span></h3>
+      </div>
+   </div>
+   <hr class="px-3">
+   <div class="d-flex justify-content-between" *ngFor="let c of categories">
+      <div class="col-6 progress" style="height: 24px;">
+         <div class="progress-bar bg-{{getColor(c)}}" role="progressbar" aria-label="Success example" [style.width.%]="getCategoryCost(c) / c.capacity * 100">
+            <span>{{c.name}}</span>
+         </div>
+      </div>
+      <h5 class="col-6 ps-5">
+         <span class="text-{{getColor(c)}}">{{getCategoryCost(c) |number:'1.2-2'}}</span>
+         from
+         <span class="text-primary">{{c.capacity |number:'1.2-2'}}</span>
+         | remaining
+         <span class="text-{{getColor(c)}}">{{c.capacity - getCategoryCost(c) |number:'1.2-2'}}</span> UAH
+      </h5>
+   </div>
 </div>

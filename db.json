@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 100000,
+    "value": 113500,
     "currency": "UAH"
   },
   "categories": [
@@ -44,29 +44,9 @@
       "id": 5
     },
     {
-      "name": "Bobby",
-      "capacity": 1500,
-      "id": 6
-    },
-    {
       "name": "Job",
-      "capacity": 10000,
-      "id": 7
-    },
-    {
-      "name": "testtt",
-      "capacity": 20,
-      "id": 8
-    },
-    {
-      "name": "ghrrrrrrrrrrrrrrrrrrr",
-      "capacity": 100,
-      "id": 9
-    },
-    {
-      "name": "gh333",
-      "capacity": 333,
-      "id": 10
+      "capacity": 150000,
+      "id": 6
     }
   ],
   "events": [
@@ -88,8 +68,8 @@
     },
     {
       "type": "outcome",
-      "amount": 1,
-      "category": 1,
+      "amount": 10,
+      "category": 5,
       "date": "2023-02-13T17:12:56.553Z",
       "description": "fffd",
       "id": 3
@@ -120,7 +100,7 @@
     },
     {
       "type": "outcome",
-      "amount": 10,
+      "amount": 100,
       "category": 1,
       "date": "2023-02-13T21:29:03.993Z",
       "description": "test",
@@ -128,8 +108,8 @@
     },
     {
       "type": "outcome",
-      "amount": 100000,
-      "category": 1,
+      "amount": 1000,
+      "category": 3,
       "date": "2023-02-15T21:50:26.303Z",
       "description": "fffdsd",
       "id": 8
@@ -144,8 +124,8 @@
     },
     {
       "type": "outcome",
-      "amount": 100000,
-      "category": 1,
+      "amount": 4000,
+      "category": 2,
       "date": "2023-02-15T21:56:42.412Z",
       "description": "test",
       "id": 10
@@ -157,6 +137,62 @@
       "date": "2023-02-15T21:57:11.352Z",
       "description": "Annual award",
       "id": 11
+    },
+    {
+      "type": "income",
+      "amount": 50000,
+      "category": 1,
+      "date": "2023-02-16T20:25:21.897Z",
+      "description": "Annual award",
+      "id": 12
+    },
+    {
+      "type": "outcome",
+      "amount": 60,
+      "category": 4,
+      "date": "2023-02-16T20:25:49.025Z",
+      "description": "test",
+      "id": 13
+    },
+    {
+      "type": "outcome",
+      "amount": 10000,
+      "category": 1,
+      "date": "2023-02-18T17:17:24.085Z",
+      "description": "test",
+      "id": 14
+    },
+    {
+      "type": "outcome",
+      "amount": 3000,
+      "category": 5,
+      "date": "2023-02-18T17:23:30.653Z",
+      "description": "test 2",
+      "id": 15
+    },
+    {
+      "type": "income",
+      "amount": 20000,
+      "category": 6,
+      "date": "2023-02-18T17:28:24.995Z",
+      "description": "Test",
+      "id": 16
+    },
+    {
+      "type": "outcome",
+      "amount": 5000,
+      "category": 3,
+      "date": "2023-02-18T17:30:09.038Z",
+      "description": "TEO",
+      "id": 17
+    },
+    {
+      "type": "outcome",
+      "amount": 1500,
+      "category": 3,
+      "date": "2023-02-18T17:31:06.345Z",
+      "description": "Wheels",
+      "id": 18
     }
   ]
 }
