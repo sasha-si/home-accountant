@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 113500,
+    "value": 113350,
     "currency": "UAH"
   },
   "categories": [
@@ -193,6 +193,14 @@
       "date": "2023-02-18T17:31:06.345Z",
       "description": "Wheels",
       "id": 18
+    },
+    {
+      "type": "outcome",
+      "amount": 150,
+      "category": 4,
+      "date": "2023-02-24T17:52:46.842Z",
+      "description": "mob",
+      "id": 19
     }
   ]
 }
