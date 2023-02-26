@@ -3,6 +3,7 @@
 </div>
 <hr class="px-3">
 <div class="d-flex justify-content-around" *ngIf="!isLoaded">Loading...</div>
-<div class="d-flex justify-content-around" *ngIf="isLoaded">
+<div class="" *ngIf="isLoaded">
    <app-history-chart class="col-12" [chartData]="chartData"></app-history-chart>
+   <app-history-events [categories]="categories" [events]="events"></app-history-events>
 </div>

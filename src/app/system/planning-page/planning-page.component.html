@@ -9,7 +9,7 @@
          <h3>Outcome</h3>
       </div>
       <div>
-         <h3>Total balance: <span class="text-primary">{{bill.value |number:'1.2-2'}} UAH</span></h3>
+         <h3>Total balance: <span class="text-primary">{{bill.value | number:'1.2-2'}} UAH</span></h3>
       </div>
    </div>
    <hr class="px-3">
@@ -20,11 +20,11 @@
          </div>
       </div>
       <h5 class="col-6 ps-5">
-         <span class="text-{{getColor(c)}}">{{getCategoryCost(c) |number:'1.2-2'}}</span>
+         <span class="text-{{getColor(c)}}">{{getCategoryCost(c) | number:'1.2-2'}}</span>
          from
          <span class="text-primary">{{c.capacity |number:'1.2-2'}}</span>
          | remaining
-         <span class="text-{{getColor(c)}}">{{c.capacity - getCategoryCost(c) |number:'1.2-2'}}</span> UAH
+         <span class="text-{{getColor(c)}}">{{c.capacity - getCategoryCost(c) | number:'1.2-2'}}</span> UAH
       </h5>
    </div>
 </div>

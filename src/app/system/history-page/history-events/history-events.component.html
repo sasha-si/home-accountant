@@ -1,1 +1,52 @@
-<p>history-events works!</p>
+<div class="bg-white p-3 col-12">
+   <hr>
+   <div class="d-flex justify-content-between">
+      <div class="chart-container col-3">
+         <h3>List of events</h3>
+      </div>
+      <div>
+         <form class="d-flex">
+            <div class="form-group me-2">
+               <input type="text" class="form-control" placeholder="{{searchPlaceholder}}" [(ngModel)]="searchValue">
+            </div>
+            <div class="dropdown">
+               <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" (click)="onDropdownOpened()">
+                 Paramether
+               </button>
+               <ul class="dropdown-menu" [class.show]="isShown">
+                 <li><a class="dropdown-item" role="button" (click)="onDropdownOpened()" (click)="changeCriteria('amount')">Amount</a></li>
+                 <li><a class="dropdown-item" role="button" (click)="onDropdownOpened()" (click)="changeCriteria('date')">Date</a></li>
+                 <li><a class="dropdown-item" role="button" (click)="onDropdownOpened()" (click)="changeCriteria('category')">Category</a></li>
+                 <li><a class="dropdown-item" role="button" (click)="onDropdownOpened()" (click)="changeCriteria('type')">Type</a></li>
+               </ul>
+             </div>
+         </form>
+      </div>
+   </div>
+   <table class="table table-striped text-end">
+      <thead>
+         <tr>
+            <th scope="col">#</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Date</th>
+            <th scope="col">Category</th>
+            <th scope="col">Type</th>
+            <th scope="col">Action</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let e of events; let id = index">
+            <th scope="row">{{id + 1}}</th>
+            <td>{{e.amount | number:'1.2-2'}}</td>
+            <td>{{e.date | date}}</td>
+            <td>{{getCategoryName(e.category)}}</td>
+            <td>
+               <span class="bg-{{e.type === 'income' ? 'success' : 'danger'}} rounded px-1">
+                  {{e.type === 'income' ? 'Income' : 'Outcome'}}
+               </span>
+            </td>
+            <td>@mdo</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
