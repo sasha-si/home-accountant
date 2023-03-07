@@ -20,6 +20,14 @@ export class HistoryEventsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.events.forEach(e => {
+      e.categoryName = this.categories.find(c => c.id === e.category)!.name;
+    });
+
+    // this.events.forEach(e => {
+    //   e.date = this.categories.find(c => c.id === e.category)!.name;
+    // });
+    console.log(this.events);
   }
 
   onDropdownOpened() {
@@ -34,9 +42,7 @@ export class HistoryEventsComponent implements OnInit {
       type: 'Type'
     };
     this.searchPlaceholder = namesMap[field];
-  };
-
-  getCategoryName(category: number) {
-    return this.categories.find(c => c.id === category)?.name
+    this.searchField = field;
+    this.searchValue = '';
   };
 }

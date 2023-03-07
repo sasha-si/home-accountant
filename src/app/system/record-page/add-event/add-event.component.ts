@@ -44,7 +44,7 @@ export class AddEventComponent implements OnInit {
 
   onSubmit() {
     const { type, categoryValue, selectCategory, definition } = this.form.value;
-    const date = new Date();
+    const date = new Date().toDateString();
     const eventItem: AddEvent = {
       type: type,
       amount: categoryValue,

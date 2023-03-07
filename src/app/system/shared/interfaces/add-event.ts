@@ -3,6 +3,7 @@ export interface AddEvent {
    type: string;
    amount: number;
    category: number;
-   date: Date;
+   date: string;
    description: string;
+   categoryName?: string;
 };

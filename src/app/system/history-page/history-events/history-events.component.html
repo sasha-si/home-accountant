@@ -7,7 +7,7 @@
       <div>
          <form class="d-flex">
             <div class="form-group me-2">
-               <input type="text" class="form-control" placeholder="{{searchPlaceholder}}" [(ngModel)]="searchValue">
+               <input type="text" class="form-control" placeholder="{{searchPlaceholder}}" [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}">
             </div>
             <div class="dropdown">
                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" (click)="onDropdownOpened()">
@@ -35,11 +35,11 @@
          </tr>
       </thead>
       <tbody>
-         <tr *ngFor="let e of events; let id = index">
+         <tr *ngFor="let e of events | filter:searchValue:searchField; let id = index">
             <th scope="row">{{id + 1}}</th>
             <td>{{e.amount | number:'1.2-2'}}</td>
             <td>{{e.date | date}}</td>
-            <td>{{getCategoryName(e.category)}}</td>
+            <td>{{e.categoryName}}</td>
             <td>
                <span class="bg-{{e.type === 'income' ? 'success' : 'danger'}} rounded px-1">
                   {{e.type === 'income' ? 'Income' : 'Outcome'}}
