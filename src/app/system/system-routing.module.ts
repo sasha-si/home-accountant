@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HistoryDetailComponent } from './history-page/history-detail/history-detail.component';
 import { SystemComponent } from './system.component';
 import { BillPageComponent } from './bill-page/bill-page.component';
 import { HistoryPageComponent } from './history-page/history-page.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
     {path: 'history', component: HistoryPageComponent},
     {path: 'planning', component: PlanningPageComponent},
     {path: 'records', component: RecordPageComponent},
+    {path: 'history/:id', component: HistoryDetailComponent}
   ]}];
 
 @NgModule({

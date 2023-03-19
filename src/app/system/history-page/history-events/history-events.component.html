@@ -35,8 +35,8 @@
          </tr>
       </thead>
       <tbody>
-         <tr *ngFor="let e of events | filter:searchValue:searchField; let id = index">
-            <th scope="row">{{id + 1}}</th>
+         <tr *ngFor="let e of events | filter:searchValue:searchField; let ind = index">
+            <th scope="row">{{ind + 1}}</th>
             <td>{{e.amount | number:'1.2-2'}}</td>
             <td>{{e.date | date}}</td>
             <td>{{e.categoryName}}</td>
@@ -45,7 +45,9 @@
                   {{e.type === 'income' ? 'Income' : 'Outcome'}}
                </span>
             </td>
-            <td>@mdo</td>
+            <td>
+               <button type="button" class="btn btn-outline-primary btn-sm"  routerLink="{{e.id}}">Detailed</button>
+            </td>
          </tr>
       </tbody>
    </table>

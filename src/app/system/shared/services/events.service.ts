@@ -19,4 +19,8 @@ export class EventsService {
   getEvents(): Observable<AddEvent[]> {
     return this.http.get<AddEvent[]>(`${baseURL}events`);
   };
+  
+  getEvent(id: string): Observable<AddEvent> {
+    return this.http.get<AddEvent>(`${baseURL}events/${id}`);
+  };
 }

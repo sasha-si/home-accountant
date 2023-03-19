@@ -23,11 +23,6 @@ export class HistoryEventsComponent implements OnInit {
     this.events.forEach(e => {
       e.categoryName = this.categories.find(c => c.id === e.category)!.name;
     });
-
-    // this.events.forEach(e => {
-    //   e.date = this.categories.find(c => c.id === e.category)!.name;
-    // });
-    console.log(this.events);
   }
 
   onDropdownOpened() {

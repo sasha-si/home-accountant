@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 107950,
+    "value": 107100,
     "currency": "UAH"
   },
   "categories": [
@@ -209,6 +209,14 @@
       "date": "2023-03-07T21:06:54.536Z",
       "description": "aha",
       "id": 20
+    },
+    {
+      "type": "outcome",
+      "amount": 850,
+      "category": 2,
+      "date": "Tue Mar 14 2023",
+      "description": "Shopping",
+      "id": 21
     }
   ]
 }

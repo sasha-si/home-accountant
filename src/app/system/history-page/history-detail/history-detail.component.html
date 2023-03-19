@@ -1,1 +1,24 @@
-<p>history-detail works!</p>
+<div class="d-flex">
+   <a class="align-self-center text-decoration-none" routerLink="/system/history"><i class="bi bi-arrow-left"></i></a>
+   <h2 class="m-0 ps-3">Record's page #{{eventData.id}}</h2>
+</div>
+<hr class="px-3">
+<div class="d-flex justify-content-center ">
+   <div *ngIf="!isLoaded">Loading...</div>
+   <div class="bg-white col-6" *ngIf="isLoaded">
+      <div>
+         <div class="p-3 bg-{{eventData.type === 'income' ? 'success' : 'danger'}}">
+            <h3 class="m-0">{{eventData.type === 'income' ? 'Income' : 'Outcome'}}</h3>
+         </div>
+         <div class="p-4">
+            <ul class="m-0">
+               <li>Amount: <strong>{{eventData.amount}}</strong></li>
+               <li>Category: <strong>{{category.name}}</strong></li>
+               <li>Description: <strong>{{eventData.description}}</strong></li>
+            </ul>
+         </div>
+         <hr class="m-0">
+         <div class="p-3">{{eventData.date}}</div>
+      </div>
+   </div>
+</div>
