@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as moment from 'moment';
 
 import { Category } from '../../shared/interfaces/category';
 import { AddEvent } from './../../shared/interfaces/add-event';
@@ -22,6 +23,9 @@ export class HistoryEventsComponent implements OnInit {
   ngOnInit(): void {
     this.events.forEach(e => {
       e.categoryName = this.categories.find(c => c.id === e.category)!.name;
+    });    
+    this.events.forEach(e => {
+      e.date = e.date.toString();
     });
   }
 

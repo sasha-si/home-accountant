@@ -1,1 +1,44 @@
-<p>history-filter works!</p>
+<div class="modal in" tabindex="-1">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title">Filter</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+               (click)="closeFilter()"></button>
+         </div>
+         <div class="modal-body">
+            <div class="form-group mb-3">
+               <label class="control-label" for="period">Select a period</label>
+               <select class="form-select" id="period" [(ngModel)]="selectedPeriod">
+                  <option *ngFor="let p of timePeriods" value="{{p.type}}">{{p.label}}</option>
+               </select>
+            </div>
+            <div class="form-group mb-3">
+               <label class="control-label" for="period">Select an event type</label>
+               <div class="d-flex">
+                  <div class="form-check me-3" *ngFor="let t of types">
+                     <input class="form-check-input" type="checkbox" id="{{t.type}}" value="{{t.type}}"
+                        (change)="handleChangeType($event.target)">
+                     <label for="{{t.type}}">{{t.label}}</label>
+                  </div>
+               </div>
+            </div>
+            <div class="form-group">
+               <label class="control-label" for="period">Select a category</label>
+               <div class="d-flex">
+                  <div class="form-check me-3" *ngFor="let c of categories">
+                     <input class="form-check-input" type="checkbox" value="{{c.id}}"
+                        (change)="handleChangeCAtegory($event.target)">
+                     <label for="">{{c.name}}</label>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+               (click)="closeFilter()">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="applyFilter()">Apply</button>
+         </div>
+      </div>
+   </div>
+</div>

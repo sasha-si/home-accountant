@@ -1,6 +1,7 @@
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, Input, OnInit } from '@angular/core';
 import { mergeMap } from 'rxjs';
+import * as moment from 'moment';
 
 import { EventsService } from './../../shared/services/events.service';
 import { Message } from './../../../shared/interfaces/message';
@@ -49,7 +50,7 @@ export class AddEventComponent implements OnInit {
       type: type,
       amount: categoryValue,
       category: +selectCategory,
-      date: date,
+      date: new Date().toUTCString(),
       description: definition
     };
 

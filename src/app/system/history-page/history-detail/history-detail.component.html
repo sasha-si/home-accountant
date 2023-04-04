@@ -1,6 +1,6 @@
 <div class="d-flex">
    <a class="align-self-center text-decoration-none" routerLink="/system/history"><i class="bi bi-arrow-left"></i></a>
-   <h2 class="m-0 ps-3">Record's page #{{eventData.id}}</h2>
+   <h2 class="m-0 ps-3">Record's page #<span *ngIf="isLoaded">{{eventData.id}}</span></h2>
 </div>
 <hr class="px-3">
 <div class="d-flex justify-content-center ">
@@ -18,7 +18,7 @@
             </ul>
          </div>
          <hr class="m-0">
-         <div class="p-3">{{eventData.date}}</div>
+         <div class="p-3">{{eventData.date | date:'full'}}</div>
       </div>
    </div>
 </div>

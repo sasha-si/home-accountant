@@ -1,5 +1,6 @@
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+
 import { ChartData } from './../../shared/interfaces/chart-data';
-import { Component, Input, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 
 @Component({
@@ -7,34 +8,30 @@ import { Chart } from 'chart.js/auto';
   templateUrl: './history-chart.component.html',
   styleUrls: ['./history-chart.component.scss']
 })
-export class HistoryChartComponent implements OnInit {
+export class HistoryChartComponent implements OnInit, OnChanges {
 
   @Input() chartData!: ChartData;
   chart: any;
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.createChart();
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.chart !== undefined) {
+      this.chart.destroy();
+    }
+    this.createChart(changes['chartData'].currentValue);
   }
 
-  createChart() {
+  ngOnInit(): void {
+  }
+
+  createChart(data: ChartData) {
     this.chart = new Chart('myChart', {
       type: 'doughnut',
       data: {
-        labels: this.chartData.labels,
+        labels: data.labels,
         datasets: [{
-          // data: [
-          //   {
-          //     label: 'hause',
-          //     data: 10000
-          //   },
-          //   {
-          //     label: 'car',
-          //     data: 1000
-          //   }
-          // ],
-          data: this.chartData.data,
+          data: data.data,
           backgroundColor: [
             'rgb(54, 162, 235)',
           ],
@@ -54,5 +51,4 @@ export class HistoryChartComponent implements OnInit {
       }
     });
   };
-
 }

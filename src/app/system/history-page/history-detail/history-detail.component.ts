@@ -29,7 +29,6 @@ export class HistoryDetailComponent implements OnInit {
       this.eventsService.getEvent(params['id'])
       .subscribe((eventData: AddEvent) => {
         this.eventData = eventData;
-
         this.categoriesService.getCategogy(this.eventData.category)
         .subscribe((category: Category) => {
           this.category = category;

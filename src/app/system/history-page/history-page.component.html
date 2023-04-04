@@ -1,9 +1,15 @@
 <div class="d-flex justify-content-between px-3">
    <h2>History section</h2>
+   <button class="btn b tn-sm btn-outline-info" (click)="openFilter()">
+      <i class="bi bi-filter"></i>
+   </button>
 </div>
 <hr class="px-3">
 <div class="d-flex justify-content-around" *ngIf="!isLoaded">Loading...</div>
 <div class="" *ngIf="isLoaded">
-   <app-history-chart class="col-12" [chartData]="chartData"></app-history-chart>
-   <app-history-events [categories]="categories" [events]="events"></app-history-events>
+   <app-history-chart class="col-12" [chartData]="filteredChartData"></app-history-chart>
+   <app-history-events [categories]="categories" [events]="filteredEvents"></app-history-events>
+   <div *ngIf="isFilterVisible">
+      <app-history-filter (onFilterCancel)="closeFilter()" (onFilterApply)="applyFilter($event)" [categories]="categories"></app-history-filter>
+   </div>
 </div>

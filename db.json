@@ -14,7 +14,7 @@
     }
   ],
   "bill": {
-    "value": 107100,
+    "value": 102900,
     "currency": "UAH"
   },
   "categories": [
@@ -54,7 +54,7 @@
       "type": "outcome",
       "amount": 1250,
       "category": 2,
-      "date": "Tuesday, February 7, 2023",
+      "date": "2011-01-09T11:52:55.812Z",
       "description": "Rock&Roll",
       "id": 1
     },
@@ -62,7 +62,7 @@
       "type": "income",
       "amount": 1,
       "category": 1,
-      "date": "2023-02-13T17:08:51.838Z",
+      "date": "2020-02-10T11:52:55.812Z",
       "description": "Annual award",
       "id": 2
     },
@@ -70,7 +70,7 @@
       "type": "outcome",
       "amount": 10,
       "category": 5,
-      "date": "2023-02-13T17:12:56.553Z",
+      "date": "11.03.2021 21:21:56",
       "description": "fffd",
       "id": 3
     },
@@ -78,7 +78,7 @@
       "type": "income",
       "amount": 1,
       "category": 1,
-      "date": "2023-02-13T17:21:07.185Z",
+      "date": "2022-04-12T11:52:55.812Z",
       "description": "Annual award",
       "id": 4
     },
@@ -86,7 +86,7 @@
       "type": "income",
       "amount": 1,
       "category": 1,
-      "date": "2023-02-13T21:27:00.188Z",
+      "date": "2022-05-20T11:52:55.812Z",
       "description": "test",
       "id": 5
     },
@@ -94,7 +94,7 @@
       "type": "income",
       "amount": 9,
       "category": 1,
-      "date": "2023-02-13T21:27:44.177Z",
+      "date": "2022-07-20T11:52:55.812Z",
       "description": "testrrrrrrrrrrrrrr",
       "id": 6
     },
@@ -102,7 +102,7 @@
       "type": "outcome",
       "amount": 100,
       "category": 1,
-      "date": "2023-02-13T21:29:03.993Z",
+      "date": "2022-08-20T11:52:55.812Z",
       "description": "test",
       "id": 7
     },
@@ -110,7 +110,7 @@
       "type": "outcome",
       "amount": 1000,
       "category": 3,
-      "date": "2023-02-15T21:50:26.303Z",
+      "date": "2022-09-20T11:52:55.812Z",
       "description": "fffdsd",
       "id": 8
     },
@@ -118,7 +118,7 @@
       "type": "income",
       "amount": 100000,
       "category": 1,
-      "date": "2023-02-15T21:51:22.189Z",
+      "date": "2022-10-28T11:52:55.812Z",
       "description": "Annual award",
       "id": 9
     },
@@ -126,7 +126,7 @@
       "type": "outcome",
       "amount": 4000,
       "category": 2,
-      "date": "2023-02-15T21:56:42.412Z",
+      "date": "2022-11-28T11:52:55.812Z",
       "description": "test",
       "id": 10
     },
@@ -134,7 +134,7 @@
       "type": "income",
       "amount": 100000,
       "category": 1,
-      "date": "2023-02-15T21:57:11.352Z",
+      "date": "2023-01-19T11:52:55.812Z",
       "description": "Annual award",
       "id": 11
     },
@@ -142,7 +142,7 @@
       "type": "income",
       "amount": 50000,
       "category": 1,
-      "date": "2023-02-16T20:25:21.897Z",
+      "date": "2023-02-20T11:52:55.812Z",
       "description": "Annual award",
       "id": 12
     },
@@ -150,7 +150,7 @@
       "type": "outcome",
       "amount": 60,
       "category": 4,
-      "date": "2023-02-16T20:25:49.025Z",
+      "date": "2023-03-21T11:52:55.812Z",
       "description": "test",
       "id": 13
     },
@@ -158,7 +158,7 @@
       "type": "outcome",
       "amount": 10000,
       "category": 1,
-      "date": "2023-02-18T17:17:24.085Z",
+      "date": "2023-03-22T11:52:55.812Z",
       "description": "test",
       "id": 14
     },
@@ -166,7 +166,7 @@
       "type": "outcome",
       "amount": 3000,
       "category": 5,
-      "date": "2023-02-18T17:23:30.653Z",
+      "date": "2023-03-23T11:52:55.812Z",
       "description": "test 2",
       "id": 15
     },
@@ -174,7 +174,7 @@
       "type": "income",
       "amount": 20000,
       "category": 6,
-      "date": "2023-02-18T17:28:24.995Z",
+      "date": "2023-03-24T11:52:55.812Z",
       "description": "Test",
       "id": 16
     },
@@ -182,7 +182,7 @@
       "type": "outcome",
       "amount": 5000,
       "category": 3,
-      "date": "2023-02-18T17:30:09.038Z",
+      "date": "2023-03-25T11:52:55.812Z",
       "description": "TEO",
       "id": 17
     },
@@ -190,7 +190,7 @@
       "type": "outcome",
       "amount": 1500,
       "category": 3,
-      "date": "2023-02-18T17:31:06.345Z",
+      "date": "2023-03-26T11:12:55.812Z",
       "description": "Wheels",
       "id": 18
     },
@@ -198,7 +198,7 @@
       "type": "outcome",
       "amount": 150,
       "category": 4,
-      "date": "2023-02-24T17:52:46.842Z",
+      "date": "2023-03-27T17:52:55.812Z",
       "description": "mob",
       "id": 19
     },
@@ -206,7 +206,7 @@
       "type": "outcome",
       "amount": 1100,
       "category": 1,
-      "date": "2023-03-07T21:06:54.536Z",
+      "date": "2023-03-28T11:52:55.812Z",
       "description": "aha",
       "id": 20
     },
@@ -214,9 +214,65 @@
       "type": "outcome",
       "amount": 850,
       "category": 2,
-      "date": "Tue Mar 14 2023",
+      "date": "2023-03-29T11:32:55.812Z",
       "description": "Shopping",
       "id": 21
+    },
+    {
+      "type": "outcome",
+      "amount": 120,
+      "category": 1,
+      "date": "2023-03-30T21:52:55.812Z",
+      "description": "Bulochka",
+      "id": 22
+    },
+    {
+      "type": "outcome",
+      "amount": 180,
+      "category": 2,
+      "date": "2023-04-01T09:52:55.812Z",
+      "description": "Beer",
+      "id": 23
+    },
+    {
+      "type": "income",
+      "amount": 10000,
+      "category": 6,
+      "date": "2023-04-02T11:52:55.812Z",
+      "description": "Fee",
+      "id": 24
+    },
+    {
+      "type": "outcome",
+      "amount": 12000,
+      "category": 1,
+      "date": "2023-04-02T13:06:22.812Z",
+      "description": "Chear",
+      "id": 25
+    },
+    {
+      "type": "outcome",
+      "amount": 750,
+      "category": 3,
+      "date": "Sun, 02 Apr 2023 14:09:28 GMT",
+      "description": "Tyres changing",
+      "id": 26
+    },
+    {
+      "type": "outcome",
+      "amount": 550,
+      "category": 5,
+      "date": "Sun, 02 Apr 2023 14:56:28 GMT",
+      "description": "Pet meal ",
+      "id": 27
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "category": 4,
+      "date": "Sun, 02 Apr 2023 17:56:28 GMT",
+      "description": "Monthly payment",
+      "id": 28
     }
   ]
 }
