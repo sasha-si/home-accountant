@@ -17,7 +17,7 @@ export class HistoryFilterComponent implements OnInit {
   selectedTypes: string[] = [];
   selectedCategories: string[] = [];
 
-  timePeriods = [//                                                            moment.js
+  timePeriods = [
     {type: 'd', label: 'Day'},
     {type: 'w', label: 'Week'},
     {type: 'M', label: 'Month'}
@@ -42,7 +42,7 @@ export class HistoryFilterComponent implements OnInit {
 
   // private calculateInputParams(field: string, checked: boolean, value: string) {
   //   if(checked) {
-  //     this[field as any].indexOf(value) === -1 ? this[field].push(value) : null;
+  //     this.returnString[field].indexOf(value) === -1 ? this[field].push(value) : null;
   //   } else {
   //     this[field] = this[field].filter(i => i !== value);
   //   }
@@ -55,6 +55,26 @@ export class HistoryFilterComponent implements OnInit {
   // handleChangeCAtegory({checked, value}: any) {
   //   this.calculateInputParams('selectedCategories', checked, value);
   // };
+
+
+
+  // private calculateInputParams(field: string, checked: boolean, value: string) {
+  //   if(checked) {
+  //     this[field].indexOf(value) === -1 ? this[field].push(value) : null;
+  //   } else {
+  //     this[field] = this[field].filter(i => i !== value);
+  //   }
+  // };
+
+  // handleChangeType({checked, value}: any) {
+  //   this.calculateInputParams('selectedTypes', checked, value);
+  // };
+
+  // handleChangeCAtegory({checked, value}: any) {
+  //   this.calculateInputParams('selectedCategories', checked, value);
+  // };
+
+
   
   handleChangeType({checked, value}: any) {
     if(checked) {

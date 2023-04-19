@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router, Params } from '@angular/router';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 import { AuthService } from './../../shared/services/auth.service';
@@ -25,13 +25,20 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private usersService: UsersService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
       'loginEmail': [null, [Validators.required, Validators.email]],
       'loginPassword': [null, [Validators.required, Validators.minLength(6)]]
+    });
+
+    this.route.queryParams.subscribe((params: Params) => {
+      if(params['accessDenied']) {
+        this.message.text = 'To move forvard you have to login!';
+      }
     });
   }
 
