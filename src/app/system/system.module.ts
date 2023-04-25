@@ -1,7 +1,7 @@
-import { CategoriesService } from './shared/services/categories.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { CategoriesService } from './shared/services/categories.service';
 import { SharedModule } from '../shared/shared.module';
 import { SystemComponent } from './system.component';
 import { SystemRoutingModule } from './system-routing.module';

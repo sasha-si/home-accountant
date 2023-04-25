@@ -4,7 +4,7 @@
 </div>
 <hr class="px-3">
 <div class="d-flex justify-content-center ">
-   <div *ngIf="!isLoaded">Loading...</div>
+   <div *ngIf="!isLoaded"><app-spinner></app-spinner></div>
    <div class="bg-white col-6" *ngIf="isLoaded">
       <div>
          <div class="p-3 bg-{{eventData.type === 'income' ? 'success' : 'danger'}}">

@@ -23,6 +23,7 @@ export class BillPageComponent implements OnInit {
       this.billService.getCurrency('usd'),
       this.billService.getCurrency('eur')
     ])
+    .pipe(delay(5000))
     .subscribe({
       next: value => {        
         this.bill = (value[0]);

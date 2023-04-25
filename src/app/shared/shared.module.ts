@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogoTitleComponent } from './components/logo-title/logo-title.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 
 @NgModule({
   declarations: [
     LogoTitleComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { LogoTitleComponent } from './components/logo-title/logo-title.component
     ReactiveFormsModule,
     FormsModule,
     LogoTitleComponent,
+    SpinnerComponent
   ]
 })
 export class SharedModule { }
