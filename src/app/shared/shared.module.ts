@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -7,7 +8,8 @@ import { LogoTitleComponent } from './components/logo-title/logo-title.component
 
 @NgModule({
   declarations: [
-    LogoTitleComponent
+    LogoTitleComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,7 @@ import { LogoTitleComponent } from './components/logo-title/logo-title.component
   exports: [
     ReactiveFormsModule,
     FormsModule,
-    LogoTitleComponent
+    LogoTitleComponent,
   ]
 })
 export class SharedModule { }
